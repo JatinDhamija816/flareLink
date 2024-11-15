@@ -1,50 +1,55 @@
-# React + TypeScript + Vite
+# Task Management Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A task management application built with **React**, **Vite**, **TypeScript**, and **Tailwind CSS**. This app allows users to manage tasks with options to filter, search, sort by priority, and mark tasks as complete or pending.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Task Creation**: Add new tasks with title, content, priority, and status.
+- **Task Deletion**: Remove tasks from the list.
+- **Search Functionality**: Search tasks by title or content.
+- **Filter Options**:
+  - Show only completed tasks.
+  - Sort tasks by priority (High to Low or Low to High).
+- **Priority Labels**: Label tasks with priority levels (High, Medium, Low) with distinct colors.
+- **Status Toggle**: Mark tasks as completed or pending.
+- **Responsive UI**: Fully responsive design using Tailwind CSS.
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **React**: Component-based UI library.
+- **Vite**: Fast and lightweight development environment.
+- **TypeScript**: Static typing for better development experience.
+- **Tailwind CSS**: Utility-first CSS framework for custom styling.
 
-- Configure the top-level `parserOptions` property like this:
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Getting Started
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### Prerequisites
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Ensure you have **Node.js** and **npm** installed on your system.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+### Installation
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/JatinDhamija816/flareLink
+   cd flareLink
+2.  Install dependencies
+    ```bash
+    npm install
+3. Start the development server:
+    ```bash
+    npm run dev
+4. Open http://localhost:5173 in your browser to view the app.
+
+### Scripts
+- **npm run dev**: Start the development server.
+- **npm run build**: Build the app for production.
+- **npm run preview**: Preview the production build.
+
+
+## Usage
+1. Adding Tasks: Use the task input form to create a new task with a title, description, priority, and status.
+2. Filtering Tasks: Click the "Filter" button to show completed tasks only or sort by priority.
+3. Search Tasks: Use the search input to filter tasks by title or content.
+4. Mark as Completed: Toggle the task status by clicking on the status icon.
